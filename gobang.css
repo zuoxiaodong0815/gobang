@@ -1,0 +1,74 @@
+.cell{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: blue;
+    vertical-align: bottom;
+    position: relative;
+}
+.topleft{
+    width: calc(50% - 1px);
+    height: calc(50% - 1px);
+    display: inline-block;
+    border-bottom: solid 1px black;
+    border-right: solid 1px black;
+    background-color: brown;
+    z-index: 100;
+}
+.topright{
+    width: calc(50% - 1px);
+    height: calc(50% - 1px);
+    display: inline-block;
+    border-bottom: solid 1px black;
+    border-left: solid 1px black;
+    background-color: brown;
+    z-index: 100;
+}
+.bottomleft{
+    width: calc(50% - 1px);
+    height: calc(50% - 1px);
+    display: inline-block;
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    background-color: brown;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    z-index: 100;
+}
+.bottomright{
+    width: calc(50% - 1px);
+    height: calc(50% - 1px);
+    display: inline-block;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    background-color: brown;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+}
+.cell.white::before{
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    content: " ";
+    display: block;
+    margin-top: 5px;
+    margin-left: 5px;
+    position: absolute;
+    border-radius: 50px;
+    background-color: white;
+    z-index: 200;
+}
+.cell.black::before{
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    content: " ";
+    display: block;
+    margin-top: 5px;
+    margin-left: 5px;
+    position: absolute;
+    border-radius: 50px;
+    background-color: black;
+    z-index: 200;
+}
